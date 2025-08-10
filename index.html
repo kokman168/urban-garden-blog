@@ -1,0 +1,110 @@
+---
+layout: default
+title: "Urban Gardening Tips & Guides for Small Apartments"
+description: "Transform your small apartment into a thriving urban garden. Expert tips, product reviews, and step-by-step guides for apartment gardeners."
+---
+
+<div class="home-hero" style="background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%); color: white; padding: 4rem 0; margin: -2rem -2rem 2rem -2rem; text-align: center;">
+    <h1 style="font-size: 3rem; margin: 0 0 1rem 0;">🌱 Transform Your Apartment Into an Urban Garden Paradise</h1>
+    <p style="font-size: 1.3rem; margin: 0 0 2rem 0;">Expert tips, product reviews, and step-by-step guides for apartment dwellers</p>
+    <a href="#latest-posts" style="background: #fff; color: #2c5530; padding: 1rem 2rem; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">Start Growing Today →</a>
+</div>
+
+<!-- Featured Content -->
+<div class="featured-content" style="margin: 3rem 0;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; text-align: center;">
+            <h3 style="color: #2c5530; margin: 0 0 1rem 0;">🌿 Indoor Gardens</h3>
+            <p>Create stunning indoor gardens in small spaces with our expert guides.</p>
+        </div>
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; text-align: center;">
+            <h3 style="color: #2c5530; margin: 0 0 1rem 0;">🥬 Grow Fresh Food</h3>
+            <p>Learn to grow fresh herbs, vegetables, and microgreens right in your kitchen.</p>
+        </div>
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; text-align: center;">
+            <h3 style="color: #2c5530; margin: 0 0 1rem 0;">💡 Product Reviews</h3>
+            <p>Discover the best gardening tools and products for apartment living.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Email Signup -->
+<div class="email-signup" style="margin: 3rem 0;">
+    <h2>🎁 Get Your FREE Urban Gardening Starter Kit!</h2>
+    <p><strong>Join 10,000+ apartment gardeners and get:</strong></p>
+    <ul style="text-align: left; display: inline-block; margin: 1rem 0;">
+        <li>✅ Complete beginner's guide to apartment gardening</li>
+        <li>✅ Plant care checklists and schedules</li>
+        <li>✅ Exclusive product discounts and deals</li>
+        <li>✅ Weekly gardening tips and troubleshooting</li>
+    </ul>
+    {% if site.mailchimp.form_url %}
+    <form action="{{ site.mailchimp.form_url }}" method="post" target="_blank">
+        <input type="email" name="EMAIL" placeholder="Enter your email address" required>
+        <button type="submit">Get My Free Kit Now!</button>
+    </form>
+    {% else %}
+    <form action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email address" required>
+        <button type="submit">Get My Free Kit Now!</button>
+    </form>
+    {% endif %}
+</div>
+
+<!-- Latest Posts -->
+<section id="latest-posts" style="margin: 4rem 0;">
+    <h2 style="color: #2c5530; text-align: center; margin-bottom: 2rem;">Latest Urban Gardening Guides</h2>
+    
+    <div class="posts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+        {% for post in site.posts limit:6 %}
+        <article class="post-card" style="background: white; border: 1px solid #e9ecef; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s;">
+            <div style="padding: 1.5rem;">
+                <h3 style="margin: 0 0 1rem 0; font-size: 1.3rem;">
+                    <a href="{{ post.url }}" style="color: #2c5530; text-decoration: none;">{{ post.title }}</a>
+                </h3>
+                {% if post.description %}
+                <p style="color: #6c757d; margin: 0 0 1rem 0;">{{ post.description | truncate: 150 }}</p>
+                {% else %}
+                <p style="color: #6c757d; margin: 0 0 1rem 0;">{{ post.content | strip_html | truncate: 150 }}</p>
+                {% endif %}
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; color: #6c757d;">
+                    <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                    <a href="{{ post.url }}" style="color: #2c5530; font-weight: bold; text-decoration: none;">Read More →</a>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Bottom CTA -->
+<div style="background: #e8f5e8; padding: 3rem 2rem; margin: 4rem -2rem -2rem -2rem; text-align: center; border-radius: 8px 8px 0 0;">
+    <h2 style="color: #2c5530; margin: 0 0 1rem 0;">Ready to Start Your Urban Garden?</h2>
+    <p style="font-size: 1.1rem; margin: 0 0 2rem 0;">Join thousands of apartment dwellers who've transformed their homes into green sanctuaries!</p>
+    <a href="/newsletter" style="background: #2c5530; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">Get Started Now →</a>
+</div>
+
+<style>
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+    .home-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .home-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .featured-content > div {
+        grid-template-columns: 1fr;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

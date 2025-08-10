@@ -1,0 +1,73 @@
+# Site settings
+title: "Urban Garden Pro"
+description: "Transform your small apartment into a thriving urban garden paradise. Expert tips, product reviews, and step-by-step guides for apartment dwellers."
+baseurl: ""
+url: "https://kokman078.github.io/my-ai-blog"
+author: "kokman"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+# SEO and Social
+twitter:
+  username: urbangardenpro
+social:
+  name: Urban Garden Pro
+  links:
+    - https://github.com/kokman078
+
+# Google Analytics 4
+google_analytics: G-XXXXXXXXXX  # Replace with your GA4 tracking ID
+
+# Google AdSense
+google_adsense: ca-pub-xxxxxxxxxxxxxxxx  # Replace with your AdSense publisher ID
+
+# Monetization Settings
+affiliate:
+  amazon_tag: "your-amazon-tag"  # Replace with your Amazon Associates tag
+  
+# Email Marketing
+mailchimp:
+  form_url: "https://your-mailchimp-form-url"  # Replace with your Mailchimp form URL
+
+# Site configuration
+show_excerpts: true
+paginate: 10
+excerpt_separator: <!--more-->
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .asset-cache/
+  - .bundle/
+  - .jekyll-assets-cache/
+  - .sass-cache/
+  - assets/js/plugins/
+  - assets/js/_main.js
+  - assets/js/vendor/
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - package.json
+  - Rakefile
+  - README
+  - tmp
