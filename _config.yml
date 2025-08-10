@@ -29,10 +29,10 @@ social:
     - https://github.com/kokman078
 
 # Google Analytics 4
-google_analytics: G-XXXXXXXXXX  # Replace with your GA4 tracking ID
+google_analytics: G-WQ33YZNRCQ  # Your real GA4 tracking ID
 
 # Google AdSense
-google_adsense: ca-pub-xxxxxxxxxxxxxxxx  # Replace with your AdSense publisher ID
+google_adsense: ca-pub-7298798192334573  # Your real AdSense publisher ID
 
 # Monetization Settings
 affiliate:
