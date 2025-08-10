@@ -107,7 +107,7 @@ Don't waste money on grocery store seeds. Professional varieties yield more.
 <div class="email-signup" style="background: linear-gradient(135deg, #2c5530, #4a7c59); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin: 2rem 0;">
 <h3>🚀 Get My FREE "Herb Profit Calculator" Spreadsheet!</h3>
 <p>Track your costs, yields, and profits automatically. Plus weekly tips from successful herb entrepreneurs!</p>
-<form action="https://urbangardenpro.us1.list-manage.com/subscribe/post?u=abc123&id=def456" method="post" target="_blank">
+<form action="{{ site.mailchimp.form_url }}" method="post" target="_blank">
 <input type="email" name="EMAIL" placeholder="Enter your email for free calculator" required style="padding: 12px; margin: 10px; border: none; border-radius: 5px; width: 350px; color: #333;">
 <button type="submit" style="background: #ff9500; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Send Me The Calculator! 📊</button>
 </form>

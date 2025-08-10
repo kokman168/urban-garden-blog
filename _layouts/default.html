@@ -56,10 +56,11 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="/">🏠 Home</a></li>
-                <li><a href="/about/">🌱 About</a></li>
-                <li><a href="/categories/">📂 Categories</a></li>
-                <li><a href="/contact/">📧 Contact</a></li>
+                <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
+                <li><a href="{{ '/about/' | relative_url }}">🌱 About</a></li>
+                <li><a href="{{ '/categories/' | relative_url }}">📂 Categories</a></li>
+                <li><a href="{{ '/newsletter/' | relative_url }}">📰 Newsletter</a></li>
+                <li><a href="{{ '/contact/' | relative_url }}">📧 Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -88,7 +89,7 @@
         <div class="email-signup">
             <h3>🚀 Get FREE Urban Gardening Tips & Product Deals!</h3>
             <p>Join 10,000+ urban gardeners getting weekly tips, exclusive discounts, and affiliate product recommendations!</p>
-            <form action="https://urbangardenpro.us1.list-manage.com/subscribe/post?u=abc123&id=def456" method="post" target="_blank">
+            <form action="{{ site.mailchimp.form_url }}" method="post" target="_blank">
                 <input type="email" name="EMAIL" placeholder="Enter your email address" required>
                 <button type="submit">Get Free Tips! 🌱</button>
             </form>
@@ -110,7 +111,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 {{ site.title }}. All rights reserved. | <a href="/privacy/" style="color: #90c695;">Privacy Policy</a></p>
+            <p>&copy; 2024 {{ site.title }}. All rights reserved. | <a href="{{ '/privacy/' | relative_url }}" style="color: #90c695;">Privacy Policy</a></p>
             <p>💰 <em>As an Amazon Associate, we earn from qualifying purchases.</em></p>
         </div>
     </footer>

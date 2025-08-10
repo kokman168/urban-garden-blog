@@ -2,6 +2,7 @@
 layout: default
 title: "Privacy Policy"
 description: "Privacy policy for Urban Garden Pro - how we collect, use, and protect your information."
+permalink: /privacy/
 ---
 
 # Privacy Policy

@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Categories"
+permalink: /categories/
+---
+
+<h1 style="text-align:center;color:#2c5530">Browse by Category</h1>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem;">
+  {% for category in site.categories %}
+    <div style="border:1px solid #ddd;border-radius:8px;padding:1rem;background:white;">
+      <h3 style="margin-top:0;color:#2c5530;">{{ category[0] | capitalize }}</h3>
+      <ul>
+        {% for post in category[1] %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

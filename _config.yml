@@ -1,7 +1,7 @@
 # Jekyll Configuration
 title: "🌱 Urban Garden Pro"
 description: "Transform your apartment into an urban garden paradise. Expert tips, product reviews, and affiliate recommendations."
-baseurl: ""
+baseurl: "/my-ai-blog"
 url: "https://kokman078.github.io"
 
 # Build settings
@@ -24,6 +24,10 @@ collections:
 google_analytics: G-WQ33YZNRCQ
 adsense_id: ca-pub-7298798192334573
 amazon_associate_tag: kokman-20
+
+# Email Marketing (set your real Mailchimp form action URL here)
+mailchimp:
+  form_url: "https://urbangardenpro.us1.list-manage.com/subscribe/post?u=abc123&id=def456"
 
 # SEO
 author: Urban Garden Pro
