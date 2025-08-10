@@ -1,0 +1,49 @@
+# Jekyll Configuration
+title: "🌱 Urban Garden Pro"
+description: "Transform your apartment into an urban garden paradise. Expert tips, product reviews, and affiliate recommendations."
+baseurl: ""
+url: "https://kokman078.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Monetization Settings
+google_analytics: G-WQ33YZNRCQ
+adsense_id: ca-pub-7298798192334573
+amazon_associate_tag: kokman-20
+
+# SEO
+author: Urban Garden Pro
+twitter:
+  username: urbangardenpro
+  card: summary_large_image
+
+# Social Links  
+social:
+  name: Urban Garden Pro
+  links:
+    - https://urbangardenpro.com
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

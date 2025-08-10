@@ -1,0 +1,118 @@
+---
+layout: default
+---
+
+<article>
+    <header style="text-align: center; margin-bottom: 2rem;">
+        <h1 style="color: #2c5530; font-size: 2.5rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
+        <p style="color: #666; font-size: 1.1rem;">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            {% if page.author %} • by {{ page.author }}{% endif %}
+        </p>
+        {% if page.tags %}
+        <div style="margin: 1rem 0;">
+            {% for tag in page.tags %}
+            <span style="background: #e8f5e8; color: #2c5530; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; margin: 0.2rem;">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+
+    <!-- In-content Ad (Top) -->
+    <div style="text-align: center; margin: 2rem 0; padding: 1rem; background: #f0f8f0; border-radius: 8px;">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="{{ site.adsense_id }}"
+             data-ad-slot="1111111111"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; margin: 2rem 0;">
+        <div class="post-content" style="font-size: 1.1rem; line-height: 1.8;">
+            {{ content }}
+        </div>
+
+        <!-- Sidebar with Ads and Affiliate Products -->
+        <aside class="sidebar">
+            <div class="sidebar-ad" style="background: #f0f8f0; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <h4 style="color: #2c5530; text-align: center; margin-bottom: 1rem;">🌱 Recommended Products</h4>
+                
+                <!-- Amazon Affiliate Product 1 -->
+                <div style="border: 1px solid #ddd; padding: 1rem; margin: 1rem 0; border-radius: 8px; background: white;">
+                    <h5 style="margin: 0 0 0.5rem 0;">LED Grow Light System</h5>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0.5rem 0;">Perfect for indoor herbs and vegetables</p>
+                    <a href="https://amazon.com/dp/B08XYZ123?tag={{ site.amazon_associate_tag }}" target="_blank" style="background: #ff9500; color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 0.9rem;">View on Amazon</a>
+                </div>
+
+                <!-- Amazon Affiliate Product 2 -->
+                <div style="border: 1px solid #ddd; padding: 1rem; margin: 1rem 0; border-radius: 8px; background: white;">
+                    <h5 style="margin: 0 0 0.5rem 0;">Hydroponic Starter Kit</h5>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0.5rem 0;">Complete system for beginners</p>
+                    <a href="https://amazon.com/dp/B08ABC456?tag={{ site.amazon_associate_tag }}" target="_blank" style="background: #ff9500; color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 0.9rem;">View on Amazon</a>
+                </div>
+
+                <!-- Sidebar AdSense -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="{{ site.adsense_id }}"
+                     data-ad-slot="2222222222"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mid-content Ad -->
+    <div style="text-align: center; margin: 3rem 0; padding: 1.5rem; background: #f0f8f0; border-radius: 8px;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="autorelaxed"
+             data-ad-client="{{ site.adsense_id }}"
+             data-ad-slot="3333333333"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Author Bio & CTA -->
+    <div style="background: linear-gradient(135deg, #e8f5e8, #d4f1d4); padding: 2rem; border-radius: 10px; margin: 3rem 0; text-align: center;">
+        <h3 style="color: #2c5530; margin-bottom: 1rem;">💡 Want More Urban Gardening Tips?</h3>
+        <p style="font-size: 1.1rem; color: #333; margin-bottom: 1.5rem;">Join thousands of urban gardeners getting weekly tips, product reviews, and exclusive discounts!</p>
+        <form action="https://urbangardenpro.us1.list-manage.com/subscribe/post?u=abc123&id=def456" method="post" target="_blank" style="display: inline-flex; gap: 1rem; align-items: center;">
+            <input type="email" name="EMAIL" placeholder="Enter your email" required style="padding: 1rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; width: 300px;">
+            <button type="submit" style="background: #2c5530; color: white; padding: 1rem 2rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; font-weight: bold;">Get Free Tips! 🌱</button>
+        </form>
+    </div>
+
+    <!-- Related Posts -->
+    {% if site.related_posts.size > 0 %}
+    <div style="margin: 3rem 0;">
+        <h3 style="color: #2c5530; text-align: center; margin-bottom: 2rem;">📚 Related Guides</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            {% for post in site.related_posts limit:3 %}
+            <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; background: white;">
+                <h4 style="margin: 0 0 1rem 0;"><a href="{{ post.url }}" style="color: #2c5530; text-decoration: none;">{{ post.title }}</a></h4>
+                <p style="color: #666; font-size: 0.9rem;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                <a href="{{ post.url }}" style="color: #4a7c59; font-weight: bold; text-decoration: none;">Read More →</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</article>
+
+<!-- Mobile responsive adjustments -->
+<style>
+@media (max-width: 768px) {
+    .post-content { grid-column: 1 / -1; }
+    .sidebar { grid-column: 1 / -1; grid-row: 2; }
+    .post-content { display: block; }
+    .sidebar .sidebar-ad { position: static; }
+}
+</style>
+
+<script>
+// Initialize all AdSense ads on the page
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
