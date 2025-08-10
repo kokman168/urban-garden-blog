@@ -36,11 +36,11 @@ google_adsense: ca-pub-7298798192334573  # Your real AdSense publisher ID
 
 # Monetization Settings
 affiliate:
-  amazon_tag: "your-amazon-tag"  # Replace with your Amazon Associates tag
+  amazon_tag: "kokman-20"  # Your real Amazon Associates tag
   
 # Email Marketing
 mailchimp:
-  form_url: "https://your-mailchimp-form-url"  # Replace with your Mailchimp form URL
+  form_url: "https://gmail.us13.list-manage.com/subscribe/post?u=e9d4beaa96a8ae21f5938eac9&id=3b32b005cf&f_id=0003c2e1f0"  # Your real Mailchimp form URL
 
 # Site configuration
 show_excerpts: true
