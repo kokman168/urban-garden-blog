@@ -10,7 +10,7 @@ title: Urban Garden Pro - Transform Your Apartment into a Garden Paradise
 ## Latest Articles
 
 {% for post in site.posts limit:10 %}
-- [{{ post.title }}]({{ site.baseurl }}{{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
+- [{{ post.title }}](/urban-garden-blog{{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
 {% endfor %}
 
 ## Popular Categories
