@@ -20,9 +20,15 @@ collections:
   posts:
     output: true
 
-# Monetization Settings
-google_analytics: G-WQ33YZNRCQ
-adsense_id: ca-pub-7298798192334573
+# Show future posts (important for scheduled content)
+future: true
+
+# Monetization
+monetization:
+  google_adsense:
+    enabled: true
+    publisher_id: "ca-pub-7298798192334573"
+  google_analytics: "G-WQ33YZNRCQ"
 amazon_associate_tag: kokman-20
 
 # Email Marketing (set your real Mailchimp form action URL here)
