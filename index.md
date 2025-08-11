@@ -14,10 +14,10 @@ title: Urban Garden Pro - Transform Your Apartment into a Garden Paradise
 {% endfor %}
 
 ## Popular Categories
-- [Hydroponic Systems]({{ site.baseurl }}/categories#hydroponics)
-- [LED Grow Lights]({{ site.baseurl }}/categories#grow-lights)
-- [Indoor Gardening Tools]({{ site.baseurl }}/categories#tools)
-- [Container Gardening]({{ site.baseurl }}/categories#containers)
+- [Hydroponic Systems](/urban-garden-blog/categories/#hydroponics)
+- [LED Grow Lights](/urban-garden-blog/categories/#grow-lights)
+- [Indoor Gardening Tools](/urban-garden-blog/categories/#tools)
+- [Container Gardening](/urban-garden-blog/categories/#containers)
 
 ---
 
