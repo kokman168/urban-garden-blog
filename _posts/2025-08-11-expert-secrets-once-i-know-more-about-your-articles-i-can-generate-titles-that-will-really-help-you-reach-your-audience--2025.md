@@ -107,7 +107,7 @@ Let me know if you have any other questions.
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 467,
   "articleBody": "Please provide me with the topic for your article!  \n\nI need to know what you want to write about so I can generate helpful and relevant content.  \n\nFor example, tell me:\n\n* **What area of expertise a..."

@@ -132,7 +132,7 @@ Let's work together to create something great!  🚀
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 1080,
   "articleBody": "## Urban Jungle: Mastering the Art of Apartment Gardening\n\nWith concrete jungles sprawling outwards and urban living becoming increasingly popular, many people find themselves yearning for the earthy ..."

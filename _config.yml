@@ -1,8 +1,8 @@
 # Jekyll Configuration
 title: "🌱 Urban Garden Pro"
 description: "Transform your apartment into an urban garden paradise. Expert tips, product reviews, and affiliate recommendations."
-baseurl: "/my-ai-blog"
-url: "https://kokman078.github.io"
+baseurl: "/urban-garden-blog"
+url: "https://kokman168.github.io"
 
 # Build settings
 markdown: kramdown

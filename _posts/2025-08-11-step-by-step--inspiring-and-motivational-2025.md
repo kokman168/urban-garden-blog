@@ -84,7 +84,7 @@ Once you provide me with the questions and answers, I can format them into a cle
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 284,
   "articleBody": ". Your writing that direct benefits (specific command)!\n\n## Recommended Products\n\n\n\n<div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margi..."

@@ -66,7 +66,7 @@ Several attractive and practical options cater to various needs and budgets:
 - ✅ Problem-solving tips
 - ✅ New product recommendations
 
-[**👉 CLAIM YOUR FREE STARTER KIT HERE 👈**](https://kokman078.github.io/my-ai-blog/newsletter)
+[**👉 CLAIM YOUR FREE STARTER KIT HERE 👈**](https://kokman168.github.io/urban-garden-blog/newsletter)
 
 ---
 
@@ -134,7 +134,7 @@ Once I know the topic, I can create relevant and helpful FAQs.
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 642,
   "articleBody": "## Small Space, Big Flavor: A Comprehensive Guide to Vertical Gardening \n\nGardening in a small space doesn't mean sacrificing flavor or variety! Vertical gardening is a fantastic solution for urban dw..."

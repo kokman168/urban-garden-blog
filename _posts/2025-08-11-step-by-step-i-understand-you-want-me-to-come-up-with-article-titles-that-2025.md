@@ -167,7 +167,7 @@ Let me know what you have in mind!
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 944,
   "articleBody": "Okay, here's a 2000+ word  article structure centered around urban gardening in small apartments, targeting beginning gardeners. \n\n##  Blooming in Small Spaces: A Beginner's Guide to Urban Apartment G..."

@@ -129,7 +129,7 @@ Once you give me the topic, I can help you create a well-structured FAQ section 
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 954,
   "articleBody": ", age over and vascular disease risk.\n\n## The Intricacies of Age, Wellness, and Vascular Disease Risk\n\n\n\n### Introduction: \n\nAs we navigate the journey through life, our bodies undergo a natural proce..."

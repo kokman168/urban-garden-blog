@@ -198,7 +198,7 @@ Let your creativity flow, add a touch of personality, and make your FAQs as memo
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 1396,
   "articleBody": "##  The Urban Jungle Diaries: Turning Your Tiny Abode into a Thriving Green Oasis \ud83c\udf3f\n\nDreaming of lush greenery but stuck in a concrete jungle?  Fear not, fellow city-dwelling plant parents!  Even the ..."

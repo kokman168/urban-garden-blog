@@ -154,7 +154,7 @@ Numerous websites, books, and even local gardening clubs offer fantastic tips an
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 1042,
   "articleBody": "## Greening Your Concrete Jungle: Proven Tips for Urban Gardening in Small Apartments\n\nUrban living offers a unique blend of excitement and convenience, but it often comes at the cost of access to gre..."

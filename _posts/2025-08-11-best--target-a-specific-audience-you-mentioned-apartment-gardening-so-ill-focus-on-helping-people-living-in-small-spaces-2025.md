@@ -137,7 +137,7 @@ Once I know your focus, I can create an informative and engaging FAQ for your ap
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 794,
   "articleBody": "##  Turning Tiny Spaces Into Urban Green Havens: A Complete Guide to Apartment Gardening\n\nLiving in an apartment doesn't mean sacrificing your love for nature. With a little creativity and smart plann..."

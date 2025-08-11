@@ -207,7 +207,7 @@ After testing **34 different LED grow lights** over 12 months and measuring actu
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   }
 }
 </script>

@@ -178,12 +178,12 @@ After extensive testing, here's my recommendation based on your goals:
     "name": "Urban Garden Pro",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kokman078.github.io/my-ai-blog/logo.png"
+      "url": "https://kokman168.github.io/urban-garden-blog/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://kokman078.github.io/my-ai-blog/2025/01/11/best-hydroponic-systems-2025/"
+    "@id": "https://kokman168.github.io/urban-garden-blog/2025/01/11/best-hydroponic-systems-2025/"
   }
 }
 </script>

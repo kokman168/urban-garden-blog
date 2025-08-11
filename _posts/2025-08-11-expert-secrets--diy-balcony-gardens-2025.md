@@ -141,7 +141,7 @@ Let's grow some knowledge together!
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 879,
   "articleBody": "##  From Drab to Fab:  Grow Your Own Oasis in 3 Simple Steps  \n\nLiving in a small apartment doesn't mean sacrificing fresh herbs, vibrant flowers, or even delicious vegetables. With a little planning ..."

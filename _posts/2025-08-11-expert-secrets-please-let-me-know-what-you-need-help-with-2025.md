@@ -144,7 +144,7 @@ The more specific you are, the better I can tailor the FAQs to your needs.
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 915,
   "articleBody": "##  Expert Secrets: Mastering the Art of Urban Gardening\n\nUrban Oasis: Cultivating Greenery in the Concrete Jungle \n\nAre you yearning to reconnect with nature but living space is at a premium? Fear no..."

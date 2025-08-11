@@ -175,7 +175,7 @@ By incorporating these tips, you can transform any space into a verdant oasis.  
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 1262,
   "articleBody": "##  Cultivating a Verdant Oasis:  Mastering Urban Gardening in Small Spaces\n\nFrom cozy studio apartments to sprawling lofts, city dwellers often crave the serenity and connection to nature that a flou..."

@@ -84,7 +84,7 @@ Let me know!
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 360,
   "articleBody": "I can create an article about urban gardening for small apartments. To ensure it hits the mark, I need a little more direction:\n\n**Please tell me:**\n\n* **Target Audience:**  Who are you writing for? (..."

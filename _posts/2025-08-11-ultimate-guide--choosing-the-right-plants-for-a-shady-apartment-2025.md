@@ -154,7 +154,7 @@ Let me know if you have any other questions!
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 1130,
   "articleBody": "## Bringing Life to Dim Corners: A Guide to Choosing Plants for Your Shady Apartment\n\nTransforming a dimly lit apartment into a verdant oasis can seem daunting, but it's completely achievable! Many be..."

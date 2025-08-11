@@ -188,7 +188,7 @@ Creating a step-by-step guide involves the following steps:
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 1308,
   "articleBody": "##  Sprouts to Succulents: A Guide to Apartment Gardening for Beginners\n\nLiving in an apartment doesn't mean sacrificing the joy of nurturing green companions. While limited space might seem like a ba..."

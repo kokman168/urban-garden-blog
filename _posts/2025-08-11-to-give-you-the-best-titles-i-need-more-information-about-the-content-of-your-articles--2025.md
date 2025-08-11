@@ -88,7 +88,7 @@ Once I have the topic, I can generate a detailed and informative FAQ section wit
   "publisher": {
     "@type": "Organization",
     "name": "Urban Garden Pro",
-    "url": "https://kokman078.github.io/my-ai-blog"
+    "url": "https://kokman168.github.io/urban-garden-blog"
   },
   "wordCount": 358,
   "articleBody": "Please provide me with the topic or main idea for the  article you want.  \n\nFor example, tell me:\n\n* **What is the specific problem you want to solve for your readers?** (e.g., Growing herbs indoors, ..."

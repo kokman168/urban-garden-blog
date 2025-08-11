@@ -17,7 +17,7 @@ Your blog now has **complete Google Analytics and AdSense integration** built-in
    - **Reporting time zone**: Your timezone
    - **Currency**: Your local currency
 5. Add a **Web data stream**:
-   - **Website URL**: `https://kokman078.github.io/my-ai-blog`
+   - **Website URL**: `https://kokman168.github.io/urban-garden-blog`
    - **Stream name**: "Urban Garden Pro Blog"
 6. **COPY YOUR MEASUREMENT ID** (starts with "G-")
 
@@ -37,7 +37,7 @@ google_analytics: G-ABC123DEF4  # Your real ID here
 1. Go to [Google AdSense](https://www.google.com/adsense/)
 2. Click "Get started" and sign in
 3. Choose "I want to monetize content on a website I own"
-4. Add your site: `https://kokman078.github.io/my-ai-blog`
+4. Add your site: `https://kokman168.github.io/urban-garden-blog`
 5. Select your country and payment currency
 6. Review and accept AdSense Terms & Conditions
 
