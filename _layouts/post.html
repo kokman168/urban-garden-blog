@@ -92,9 +92,9 @@ layout: default
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
             {% for post in site.related_posts limit:3 %}
             <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; background: white;">
-                <h4 style="margin: 0 0 1rem 0;"><a href="{{ post.url | relative_url }}" style="color: #2c5530; text-decoration: none;">{{ post.title }}</a></h4>
+                <h4 style="margin: 0 0 1rem 0;"><a href="/urban-garden-blog{{ post.url }}" style="color: #2c5530; text-decoration: none;">{{ post.title }}</a></h4>
                 <p style="color: #666; font-size: 0.9rem;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
-                <a href="{{ post.url | relative_url }}" style="color: #4a7c59; font-weight: bold; text-decoration: none;">Read More →</a>
+                <a href="/urban-garden-blog{{ post.url }}" style="color: #4a7c59; font-weight: bold; text-decoration: none;">Read More →</a>
             </div>
             {% endfor %}
         </div>
