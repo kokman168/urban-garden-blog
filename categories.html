@@ -12,7 +12,7 @@ permalink: /categories/
       <h3 style="margin-top:0;color:#2c5530;">{{ category[0] | capitalize }}</h3>
       <ul>
         {% for post in category[1] %}
-          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          <li><a href="/urban-garden-blog{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
       </ul>
     </div>
