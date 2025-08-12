@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- AdSense site verification -->
-    <meta name="google-adsense-account" content="ca-pub-7298798192334573">
+    <!-- Adsterra: no site verification required -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_id }}" crossorigin="anonymous"></script>
+    <!-- Adsterra ads integrated -->
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -146,13 +144,17 @@
     <!-- Header Ad Banner -->
     <div class="container">
         <div class="ad-banner">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="{{ site.adsense_id }}"
-                 data-ad-slot="4292088829"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <!-- Adsterra 728x90 Banner -->
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '3627332f2a929391dc29ac58e114abc6',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width'  : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/3627332f2a929391dc29ac58e114abc6/invoke.js"></script>
         </div>
     </div>
 
@@ -177,13 +179,17 @@
     <!-- Footer Ad -->
     <div class="container">
         <div class="ad-banner">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="{{ site.adsense_id }}"
-                 data-ad-slot="8311224883"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <!-- Adsterra 728x90 Banner (footer) -->
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '3627332f2a929391dc29ac58e114abc6',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width'  : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/3627332f2a929391dc29ac58e114abc6/invoke.js"></script>
         </div>
     </div>
 
@@ -195,8 +201,7 @@
     </footer>
 
     <script>
-        // Initialize AdSense
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        // Removed AdSense initialization
     </script>
     <script>
         // Lazy-load all images if not already set
