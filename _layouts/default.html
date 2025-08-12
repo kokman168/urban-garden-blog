@@ -45,6 +45,30 @@
             main { padding: 20px; margin: 10px 0; }
             .email-signup input { width: 250px; }
         }
+    
+        /* ===== Extra responsive tweaks ===== */
+        @media (max-width: 768px) {
+            nav ul { flex-wrap: wrap; gap: 10px; }
+            nav li { margin: 0; }
+            nav a  { font-size: 0.9rem; padding: 6px 8px; }
+
+            header h1 { font-size: 1.8rem; }
+            main      { padding: 20px 15px; }
+        }
+
+        @media (max-width: 576px) {
+            .container { padding: 0 10px; }
+            header h1  { font-size: 1.5rem; line-height: 1.3; }
+            body       { font-size: 0.95rem; }
+        }
+
+        /* Sidebar spacing when stacked under post */
+        @media (max-width: 768px) {
+            .sidebar { margin-top: 2rem; }
+        }
+
+        /* Ensure media scales */
+        img, iframe { max-width: 100%; height: auto; }
     </style>
     <!-- Google CMP Funding Choices -->
     <script async src="https://fundingchoicesmessages.google.com/i/pub-7298798192334573?ers=1" crossorigin="anonymous"></script>
