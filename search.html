@@ -14,18 +14,21 @@ permalink: /search/
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     json: '/urban-garden-blog/search.json',
+    templateMiddleware: function(prop, value, template){
+      if(prop === 'url'){
+        if(value.indexOf('/urban-garden-blog/') === -1){
+          var origin = window.location.origin;
+          if(value.startsWith(origin)){
+            value = origin + '/urban-garden-blog' + value.slice(origin.length);
+          } else {
+            value = '/urban-garden-blog' + value;
+          }
+        }
+        return value;
+      }
+    },
     searchResultTemplate: '<li style="margin:0.5rem 0;"><a href="{url}" style="color:#2c5530;font-weight:bold;">{title}</a></li>',
     noResultsText: '<li>No results found</li>',
-    limit: 20,
-    transformData: function(item){
-      if(!/^https?:\/\//.test(item.url)){
-        item.url = '/urban-garden-blog'+item.url;
-      } else if(item.url.indexOf('/urban-garden-blog/') === -1){
-        // still missing prefix
-        var parts = item.url.split(window.location.origin);
-        item.url = window.location.origin + '/urban-garden-blog' + (parts[1] || item.url);
-      }
-      return item;
-    }
+    limit: 20
   });
 </script>
