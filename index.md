@@ -3,6 +3,12 @@ layout: default
 title: Urban Garden Pro - Transform Your Apartment into a Garden Paradise
 ---
 
+<section class="hero">
+  <h2>Grow Fresh Food — Even In A Tiny Apartment</h2>
+  <p>Join 10,000+ urban gardeners for weekly tips & exclusive discounts.</p>
+  <a href="/urban-garden-blog/newsletter/" class="cta-button">Get Free Tips 🌱</a>
+</section>
+
 # 🌱 Welcome to Urban Garden Pro
 
 **Transform your apartment into an urban garden paradise with our expert tips and product recommendations.**

@@ -1,0 +1,21 @@
+---
+layout: default
+title: Search
+permalink: /search/
+---
+
+<h1>🔍 Search Urban Garden Pro</h1>
+<input type="text" id="search-input" placeholder="Type keywords..." style="width:100%;max-width:500px;padding:12px;font-size:1.1rem;border:1px solid #ccc;border-radius:5px;">
+<ul id="results-container" style="margin-top:1.5rem;list-style:none;padding:0;"></ul>
+
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.2/dest/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/urban-garden-blog/search.json',
+    searchResultTemplate: '<li style="margin:0.5rem 0;"><a href="{url}" style="color:#2c5530;font-weight:bold;">{title}</a></li>',
+    noResultsText: '<li>No results found</li>',
+    limit: 20
+  });
+</script>

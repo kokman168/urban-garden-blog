@@ -69,7 +69,17 @@
 
         /* Ensure media scales */
         img, iframe { max-width: 100%; height: auto; }
+
+        /* Hero section */
+        .hero { background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat; color:#fff; text-align:center; padding:100px 20px; margin:40px 0; border-radius:10px; }
+        .hero h2 { font-size:2.5rem; margin-bottom:1rem; }
+        .hero p  { font-size:1.1rem; margin-bottom:1.5rem; }
+        .cta-button { background:#ff9500; color:#fff; padding:15px 30px; border:none; border-radius:5px; text-decoration:none; font-weight:bold; font-size:1.1rem; }
+        @media(max-width:768px){ .hero{padding:60px 15px;} .hero h2{font-size:1.8rem;} }
     </style>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+    <link rel="preconnect" href="https://www.google-analytics.com">
     <!-- Google CMP Funding Choices -->
     <script async src="https://fundingchoicesmessages.google.com/i/pub-7298798192334573?ers=1" crossorigin="anonymous"></script>
 </head>
@@ -89,6 +99,7 @@
                 <li><a href="/urban-garden-blog/categories/">📂 Categories</a></li>
                 <li><a href="/urban-garden-blog/newsletter/">📰 Newsletter</a></li>
                 <li><a href="/urban-garden-blog/contact/">📧 Contact</a></li>
+                <li><a href="/urban-garden-blog/search/">🔍 Search</a></li>
             </ul>
         </div>
     </nav>
@@ -147,6 +158,12 @@
     <script>
         // Initialize AdSense
         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script>
+        // Lazy-load all images if not already set
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelectorAll('img:not([loading])').forEach(function(img){ img.setAttribute('loading','lazy'); });
+        });
     </script>
 </body>
 </html>
