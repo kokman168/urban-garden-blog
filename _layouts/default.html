@@ -20,6 +20,44 @@
       gtag('config', '{{ site.google_analytics }}');
     </script>
     
+    {% if page.layout == 'post' %}
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ page.image | default: '/urban-garden-blog/assets/og-default.jpg' | absolute_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | escape }}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ page.image | default: '/urban-garden-blog/assets/og-default.jpg' | absolute_url }}">
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ page.title | escape }}",
+      "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "image": ["{{ page.image | default: '/urban-garden-blog/assets/og-default.jpg' | absolute_url }}"],
+      "author": {
+        "@type": "Person",
+        "name": "{{ page.author | default: 'Urban Garden Pro' }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Urban Garden Pro",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ '/urban-garden-blog/assets/logo-512.png' | absolute_url }}"
+        }
+      },
+      "mainEntityOfPage": "{{ page.url | absolute_url }}"
+    }
+    </script>
+{% endif %}
+
     {% seo %}
     
     <style>
