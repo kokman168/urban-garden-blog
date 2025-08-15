@@ -1,207 +1,18 @@
 ---
 layout: default
-title: Search - Find Garden Guides & Tips
+title: Search
 permalink: /search/
 ---
 
-<div class="search-container">
-  <div class="search-header">
-    <h1>🔍 Search Our Garden Library</h1>
-    <p>Find guides, tips, and product reviews from our 114+ articles</p>
-  </div>
-  
-  <div class="search-box">
-    <input type="text" id="search-input" placeholder="Search for hydroponics, grow lights, herbs..." autofocus>
-    <span class="search-icon">🔎</span>
-  </div>
-  
-  <div class="search-filters">
-    <span class="filter-label">Popular searches:</span>
-    <a href="#" class="search-tag" data-search="hydroponic">Hydroponic</a>
-    <a href="#" class="search-tag" data-search="LED grow lights">LED Grow Lights</a>
-    <a href="#" class="search-tag" data-search="herbs">Herbs</a>
-    <a href="#" class="search-tag" data-search="balcony">Balcony Garden</a>
-    <a href="#" class="search-tag" data-search="composting">Composting</a>
-  </div>
-  
-  <div id="search-results">
-    <div id="result-count"></div>
-    <ul id="results-container"></ul>
-  </div>
-</div>
-
-<style>
-.search-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.search-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.search-header h1 {
-  color: #2c5530;
-  margin-bottom: 10px;
-}
-
-.search-header p {
-  color: #666;
-  font-size: 1.1rem;
-}
-
-.search-box {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-#search-input {
-  width: 100%;
-  padding: 16px 50px 16px 20px;
-  font-size: 1.2rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-#search-input:focus {
-  border-color: #2c5530;
-  outline: none;
-  box-shadow: 0 4px 10px rgba(44, 85, 48, 0.1);
-}
-
-.search-icon {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  pointer-events: none;
-}
-
-.search-filters {
-  margin-bottom: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-}
-
-.filter-label {
-  color: #666;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.search-tag {
-  background: #f0f8f0;
-  color: #2c5530;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  border: 1px solid #e0f0e0;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.search-tag:hover {
-  background: #2c5530;
-  color: white;
-  transform: translateY(-2px);
-}
-
-#result-count {
-  color: #666;
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-#results-container {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#results-container li {
-  background: white;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border-left: 4px solid #2c5530;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-#results-container li:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.search-result-title {
-  color: #2c5530;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.search-result-title:hover {
-  color: #4a7c59;
-}
-
-.search-result-excerpt {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-.search-result-meta {
-  color: #999;
-  font-size: 0.9rem;
-}
-
-.no-results {
-  text-align: center;
-  padding: 40px;
-  color: #666;
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    padding: 10px;
-  }
-  
-  #search-input {
-    font-size: 1rem;
-    padding: 12px 40px 12px 15px;
-  }
-  
-  .search-filters {
-    gap: 8px;
-  }
-  
-  .search-tag {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-  }
-}
-</style>
+<h1>🔍 Search Urban Garden Pro</h1>
+<input type="text" id="search-input" placeholder="Type keywords..." style="width:100%;max-width:500px;padding:12px;font-size:1.1rem;border:1px solid #ccc;border-radius:5px;">
+<ul id="results-container" style="margin-top:1.5rem;list-style:none;padding:0;"></ul>
 
 <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.2/dest/simple-jekyll-search.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var searchInput = document.getElementById('search-input');
-  var resultCount = document.getElementById('result-count');
-  var resultsContainer = document.getElementById('results-container');
-  
-  // Initialize search
-  var sjs = SimpleJekyllSearch({
-    searchInput: searchInput,
-    resultsContainer: resultsContainer,
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
     json: '/urban-garden-blog/search.json',
     templateMiddleware: function(prop, value, template){
       if(prop === 'url'){
@@ -215,42 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return value;
       }
-      return value;
     },
-    searchResultTemplate: '<li><a href="{url}" class="search-result-title">{title}</a><div class="search-result-excerpt">{excerpt}</div><div class="search-result-meta">📅 {date} | 📂 {categories}</div></li>',
-    noResultsText: '<div class="no-results">🔍 No results found. Try different keywords!</div>',
-    limit: 50,
-    fuzzy: true,
-    exclude: ['Welcome']
+    searchResultTemplate: '<li style="margin:0.5rem 0;"><a href="{url}" style="color:#2c5530;font-weight:bold;">{title}</a></li>',
+    noResultsText: '<li>No results found</li>',
+    limit: 20
   });
-  
-  // Update result count
-  searchInput.addEventListener('input', function() {
-    setTimeout(function() {
-      var results = resultsContainer.querySelectorAll('li').length;
-      if(searchInput.value.length > 0) {
-        if(results > 0) {
-          resultCount.textContent = 'Found ' + results + ' result' + (results === 1 ? '' : 's');
-        } else {
-          resultCount.textContent = '';
-        }
-      } else {
-        resultCount.textContent = '';
-      }
-    }, 100);
-  });
-  
-  // Handle tag clicks
-  document.querySelectorAll('.search-tag').forEach(function(tag) {
-    tag.addEventListener('click', function(e) {
-      e.preventDefault();
-      searchInput.value = this.getAttribute('data-search');
-      searchInput.dispatchEvent(new Event('input'));
-      searchInput.focus();
-    });
-  });
-  
-  // Focus search on page load
-  searchInput.focus();
-});
 </script>
