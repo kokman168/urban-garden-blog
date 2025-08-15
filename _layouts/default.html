@@ -1,136 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Adsterra: no site verification required -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    
-    <!-- Adsterra ads integrated -->
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
-    
-    {% if page.layout == 'post' %}
-    <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{{ page.title | escape }}">
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ page.image | default: '/urban-garden-blog/assets/og-default.jpg' | absolute_url }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title | escape }}">
-    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="twitter:image" content="{{ page.image | default: '/urban-garden-blog/assets/og-default.jpg' | absolute_url }}">
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} - Urban Gardening Tips & Guides{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 155 }}{% elsif page.description %}{{ page.description }}{% else %}Learn urban gardening, hydroponics, indoor growing tips. Transform your apartment into a thriving garden. 114+ guides for beginners to experts.{% endif %}">
+  <meta name="keywords" content="urban gardening, apartment gardening, indoor plants, hydroponics, grow lights, balcony garden, container gardening, herbs, composting, vertical gardening">
+  <meta name="author" content="Urban Garden Pro">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  {% seo %}
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  
+  {% if page.layout == 'post' %}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | Urban Garden Pro{% else %}{{ site.title }} - Transform Your Apartment into a Garden{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 155 }}{% elsif page.description %}{{ page.description }}{% else %}Discover proven urban gardening techniques, product reviews, and step-by-step guides. Start growing fresh food in your apartment today!{% endif %}">
+  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1200&h=630&fit=crop{% endif %}">
+  <meta property="og:site_name" content="Urban Garden Pro">
+  {% if page.layout == 'post' %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:author" content="Urban Garden Pro">
+  {% endif %}
 
-    <!-- Article Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ page.title | escape }}",
-      "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}",
-      "datePublished": "{{ page.date | date_to_xmlschema }}",
-      "image": ["{{ page.image | default: '/urban-garden-blog/assets/og-default.jpg' | absolute_url }}"],
-      "author": {
-        "@type": "Person",
-        "name": "{{ page.author | default: 'Urban Garden Pro' }}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Urban Garden Pro",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ '/urban-garden-blog/assets/logo-512.png' | absolute_url }}"
-        }
-      },
-      "mainEntityOfPage": "{{ page.url | absolute_url }}"
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | Urban Garden Pro{% else %}{{ site.title }}{% endif %}">
+  <meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 155 }}{% else %}Transform your apartment into a thriving garden. 114+ guides on hydroponics, grow lights, herbs & more!{% endif %}">
+  <meta property="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1200&h=630&fit=crop{% endif %}">
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | escape }}",
+    "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 155 }}{% elsif page.description %}{{ page.description }}{% else %}Discover proven urban gardening techniques, product reviews, and step-by-step guides. Start growing fresh food in your apartment today!{% endif %}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "image": ["{% if page.image %}{{ page.image | absolute_url }}{% else %}https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1200&h=630&fit=crop{% endif %}"],
+    "author": {
+      "@type": "Person",
+      "name": "Urban Garden Pro"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Urban Garden Pro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/urban-garden-blog/assets/logo-512.png' | absolute_url }}"
+      }
+    },
+    "mainEntityOfPage": "{{ page.url | absolute_url }}"
+  }
+  </script>
+  {% endif %}
+
+  {% seo %}
+  
+  <style>
+    /* Base Styles */
+    * {
+      box-sizing: border-box;
     }
-    </script>
-{% endif %}
-
-    {% seo %}
     
-    <style>
-        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #2c5530; color: white; padding: 20px 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        nav { background: #4a7c59; padding: 15px 0; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        nav li { margin: 0 20px; }
-        nav a { color: white; text-decoration: none; font-weight: bold; }
-        main { background: white; margin: 20px 0; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .ad-banner { text-align: center; margin: 30px 0; padding: 20px; background: #f0f8f0; border-radius: 8px; }
-        .email-signup { background: linear-gradient(135deg, #2c5530, #4a7c59); color: white; padding: 30px; border-radius: 10px; text-align: center; margin: 40px 0; }
-        .email-signup input { padding: 12px; margin: 10px; border: none; border-radius: 5px; width: 300px; font-size: 16px; }
-        .email-signup button { background: #fff; color: #2c5530; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 16px; }
-        .affiliate-box { background: #e8f5e8; border: 2px solid #2c5530; padding: 20px; border-radius: 10px; margin: 30px 0; text-align: center; }
-        .affiliate-button { background: #ff9500; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin: 10px; }
-        footer { background: #2c5530; color: white; text-align: center; padding: 20px 0; }
-        .sidebar-ad { position: sticky; top: 20px; }
-        @media (max-width: 768px) {
-            .container { padding: 0 15px; }
-            main { padding: 20px; margin: 10px 0; }
-            .email-signup input { width: 250px; }
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
     
-        /* ===== Extra responsive tweaks ===== */
-        @media (max-width: 768px) {
-            nav ul { flex-wrap: wrap; gap: 10px; }
-            nav li { margin: 0; }
-            nav a  { font-size: 0.9rem; padding: 6px 8px; }
-
-            header h1 { font-size: 1.8rem; }
-            main      { padding: 20px 15px; }
-        }
-
-        @media (max-width: 576px) {
-            .container { padding: 0 10px; }
-            header h1  { font-size: 1.5rem; line-height: 1.3; }
-            body       { font-size: 0.95rem; }
-        }
-
-        /* Sidebar spacing when stacked under post */
-        @media (max-width: 768px) {
-            .sidebar { margin-top: 2rem; }
-        }
-
-        /* Ensure media scales */
-        img, iframe { max-width: 100%; height: auto; }
-
-        /* Hero section */
-        .hero { background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat; color:#fff; text-align:center; padding:100px 20px; margin:40px 0; border-radius:10px; }
-        .hero h2 { font-size:2.5rem; margin-bottom:1rem; }
-        .hero p  { font-size:1.1rem; margin-bottom:1.5rem; }
-        .cta-button { background:#ff9500; color:#fff; padding:15px 30px; border:none; border-radius:5px; text-decoration:none; font-weight:bold; font-size:1.1rem; }
-        @media(max-width:768px){ .hero{padding:60px 15px;} .hero h2{font-size:1.8rem;} }
-    /* Dark theme overrides */
-body.dark { background:#121212; color:#e0e0e0; }
-body.dark header, body.dark nav, body.dark footer { background:#1f1f1f; }
-body.dark a { color:#90c695; }
-</style>
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      width: 100%;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    
+    nav {
+      background: #4a7c59;
+      padding: 15px 0;
+    }
+    
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav li {
+      margin: 0 20px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    main {
+      background: white;
+      margin: 20px 0;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .ad-banner {
+      text-align: center;
+      margin: 30px 0;
+      padding: 20px;
+      background: #f0f8f0;
+      border-radius: 8px;
+    }
+    
+    .email-signup {
+      background: linear-gradient(135deg, #2c5530, #4a7c59);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .email-signup input {
+      padding: 12px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 300px;
+      font-size: 16px;
+    }
+    
+    .email-signup button {
+      background: #fff;
+      color: #2c5530;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .affiliate-box {
+      background: #e8f5e8;
+      border: 2px solid #2c5530;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .affiliate-button {
+      background: #ff9500;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 10px;
+    }
+    
+    footer {
+      background: #2c5530;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    
+    .sidebar-ad {
+      position: sticky;
+      top: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      main {
+        padding: 20px;
+        margin: 10px 0;
+      }
+      .email-signup input {
+        width: 250px;
+      }
+    }
+    
+    /* ===== Extra responsive tweaks ===== */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      nav li {
+        margin: 0;
+      }
+      nav a {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      main {
+        padding: 20px 15px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 10px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
+      body {
+        font-size: 0.95rem;
+      }
+    }
+    
+    /* Enhanced Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      .site-title {
+        font-size: 1.5rem;
+      }
+      
+      nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+      }
+      
+      nav li {
+        margin: 0.25rem 0.5rem;
+      }
+      
+      nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      /* Mobile-optimized content */
+      main {
+        font-size: 1rem;
+      }
+      
+      /* Touch-friendly buttons */
+      button, .btn, a.btn {
+        min-height: 44px;
+        min-width: 44px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .site-title {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+      
+      nav ul {
+        gap: 0.5rem;
+      }
+      
+      nav a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+      }
+    }
+    
+    /* Improve tap targets for mobile */
+    @media (hover: none) and (pointer: coarse) {
+      a, button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Focus styles for accessibility */
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline: 2px solid #ff9500;
+      outline-offset: 2px;
+    }
+    
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+    body.dark-mode header {
+      background: linear-gradient(135deg, #1a2f1c 0%, #2d4a35 100%);
+    }
+    body.dark-mode main {
+      background-color: #2a2a2a;
+      color: #e0e0e0;
+    }
+    body.dark-mode footer {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+    body.dark-mode a {
+      color: #66bb6a;
+    }
+    body.dark-mode a:hover {
+      color: #81c784;
+    }
+    body.dark-mode .btn-primary {
+      background: #ff9500;
+    }
+    body.dark-mode .post-card,
+    body.dark-mode .featured-card,
+    body.dark-mode .category-card {
+      background: #333;
+      border-color: #444;
+    }
+    
+    /* Print styles */
+    @media print {
+      header, footer, nav, .social-share, .newsletter-signup, .ad-banner {
+        display: none;
+      }
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  </style>
+  
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <!-- Google CMP Funding Choices -->
-    <script async src="https://fundingchoicesmessages.google.com/i/pub-7298798192334573?ers=1" crossorigin="anonymous"></script>
-</head>
+  <!-- Google CMP Funding Choices -->
+  </head>
 <body>
-    <header>
-        <div class="container" style="position:relative;">
-             <h1>{{ site.title }}</h1>
-             <p>{{ site.description }}</p>
-             <button id="theme-toggle" aria-label="Toggle dark mode" style="position:absolute;top:10px;right:10px;background:#ffc107;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1.2rem;">🌙</button>
-         </div>
-    </header>
+  <header>
+    <div class="container" style="position:relative;">
+      <h1 class="site-title">{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+      <button id="theme-toggle" aria-label="Toggle dark mode" style="position:absolute;top:10px;right:10px;background:#ffc107;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1.2rem;">🌙</button>
+    </div>
+  </header>
     
     <nav>
         <div class="container">

@@ -1,0 +1,168 @@
+---
+layout: default
+title: Urban Garden Pro - Transform Your Apartment into a Garden Paradise
+description: Learn urban gardening, hydroponics, and indoor growing techniques. Transform your apartment into a thriving garden with our 114+ expert guides and tutorials.
+---
+
+<div class="homepage-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">🌱 Grow Fresh Food in Your Apartment</h1>
+      <p class="hero-subtitle">Join 10,000+ urban gardeners transforming small spaces into thriving gardens</p>
+      <div class="hero-buttons">
+        <a href="/urban-garden-blog/newsletter/" class="btn btn-primary">Get Free Weekly Tips 🌿</a>
+        <a href="#featured-posts" class="btn btn-secondary">Start Reading →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="stats-section">
+    <div class="stat-card">
+      <span class="stat-number">114+</span>
+      <span class="stat-label">Garden Guides</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">10K+</span>
+      <span class="stat-label">Happy Gardeners</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">50+</span>
+      <span class="stat-label">Product Reviews</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Free Content</span>
+    </div>
+  </section>
+
+  <!-- Featured Posts -->
+  <section id="featured-posts" class="featured-section">
+    <h2 class="section-title">🔥 Trending Guides This Week</h2>
+    <div class="featured-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="featured-card">
+        <div class="featured-image" style="background-image: url({{ post.image | default: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400' }});">
+          <span class="featured-category">{{ post.categories | first | default: "Gardening" }}</span>
+        </div>
+        <div class="featured-content">
+          <h3><a href="/urban-garden-blog{{ post.url }}">{{ post.title | truncate: 60 }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+          <div class="featured-meta">
+            <span>📅 {{ post.date | date: "%b %d, %Y" }}</span>
+            <a href="/urban-garden-blog{{ post.url }}" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="categories-section">
+    <h2 class="section-title">🏷️ Browse by Category</h2>
+    <div class="category-grid">
+      <a href="/urban-garden-blog/categories/#hydroponics" class="category-card">
+        <span class="category-icon">💧</span>
+        <h3>Hydroponic Systems</h3>
+        <p>Soil-free growing solutions for apartments</p>
+      </a>
+      <a href="/urban-garden-blog/categories/#grow-lights" class="category-card">
+        <span class="category-icon">💡</span>
+        <h3>LED Grow Lights</h3>
+        <p>Best lighting for indoor plants</p>
+      </a>
+      <a href="/urban-garden-blog/categories/#containers" class="category-card">
+        <span class="category-icon">🪴</span>
+        <h3>Container Gardening</h3>
+        <p>Maximize small space growing</p>
+      </a>
+      <a href="/urban-garden-blog/categories/#herbs" class="category-card">
+        <span class="category-icon">🌿</span>
+        <h3>Herb Gardens</h3>
+        <p>Fresh herbs year-round</p>
+      </a>
+      <a href="/urban-garden-blog/categories/#tools" class="category-card">
+        <span class="category-icon">🛠️</span>
+        <h3>Garden Tools</h3>
+        <p>Essential equipment reviews</p>
+      </a>
+      <a href="/urban-garden-blog/categories/#composting" class="category-card">
+        <span class="category-icon">♻️</span>
+        <h3>Indoor Composting</h3>
+        <p>Eco-friendly waste solutions</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Recent Posts -->
+  <section class="recent-section">
+    <h2 class="section-title">📚 Latest Articles</h2>
+    <div class="recent-posts">
+      {% for post in site.posts offset:3 limit:12 %}
+      <article class="post-card">
+        <h3><a href="/urban-garden-blog{{ post.url }}">{{ post.title }}</a></h3>
+        <div class="post-meta">
+          <span>📅 {{ post.date | date: "%B %d, %Y" }}</span>
+          <span>📂 {{ post.categories | first | default: "General" }}</span>
+        </div>
+        <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        <a href="/urban-garden-blog{{ post.url }}" class="read-link">Continue Reading →</a>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="view-all">
+      <a href="/urban-garden-blog/archive/" class="btn btn-outline">View All Articles →</a>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="newsletter-cta">
+    <div class="newsletter-content">
+      <h2>🎁 Get Your Free Urban Gardening Starter Guide!</h2>
+      <p>Plus weekly tips, product deals, and exclusive content for subscribers</p>
+      <a href="/urban-garden-blog/newsletter/" class="btn btn-large">Join 10,000+ Gardeners 🌱</a>
+    </div>
+  </section>
+
+  <!-- Monetization: Product Recommendations -->
+  <section class="affiliate-section">
+    <h2 class="section-title">🛒 Top-Rated Products for Urban Gardeners</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>AeroGarden Harvest</h3>
+        <p>Indoor hydroponic garden system - grow herbs & veggies year-round!</p>
+        <a href="https://www.amazon.com/dp/B07CKK8Z78?tag=kokman-20" class="btn btn-primary" target="_blank" rel="noopener">Check Price on Amazon</a>
+      </div>
+      <div class="product-card">
+        <h3>VIPARSPECTRA LED Grow Light</h3>
+        <p>Professional full-spectrum LED for maximum plant growth</p>
+        <a href="https://www.amazon.com/dp/B07YWYH439?tag=kokman-20" class="btn btn-primary" target="_blank" rel="noopener">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <h3>Miracle-Gro Indoor Plant Food</h3>
+        <p>Instantly feeds all indoor houseplants including edibles</p>
+        <a href="https://www.amazon.com/dp/B08XQ4ZQFB?tag=kokman-20" class="btn btn-primary" target="_blank" rel="noopener">Shop Now</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Ad Banner -->
+  <div class="ad-banner homepage-ad">
+    <!-- Adsterra 728x90 Banner -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '3627332f2a929391dc29ac58e114abc6',
+            'format' : 'iframe',
+            'height' : 90,
+            'width'  : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/3627332f2a929391dc29ac58e114abc6/invoke.js"></script>
+  </div>
+</div>
+
+<!-- Homepage Styles -->
+<link rel="stylesheet" href="/urban-garden-blog/assets/css/homepage.css">

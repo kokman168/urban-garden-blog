@@ -1,0 +1,44 @@
+[build]
+  publish = "_site"
+  command = "bundle exec jekyll build"
+
+[build.environment]
+  RUBY_VERSION = "3.2.0"
+
+[[plugins]]
+  package = "netlify-plugin-ruby"
+
+[context.production.environment]
+  JEKYLL_ENV = "production"
+
+[context.deploy-preview.environment]
+  JEKYLL_ENV = "development"
+
+[context.branch-deploy.environment]
+  JEKYLL_ENV = "development"
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "max-age=31536000"
+
+# Redirects for better SEO
+[[redirects]]
+  from = "/index.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
