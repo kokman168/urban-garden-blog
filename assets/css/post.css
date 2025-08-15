@@ -1,4 +1,18 @@
 /* Modern Blog Post Styling */
+
+/* Global body background */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Legacy selectors for compatibility */
+.post {
+  background: #ffffff;
+}
+
+.post-content {
+  color: #343a40;
+}
 .post-article {
   max-width: 1200px;
   margin: 0 auto;
