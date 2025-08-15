@@ -19,6 +19,7 @@
   
   {% seo %}
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -27,6 +28,8 @@
   </script>
   
   {% if page.layout == 'post' %}
+  <link rel="stylesheet" href="/urban-garden-blog/assets/css/post.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_id }}" crossorigin="anonymous"></script>
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
