@@ -43,7 +43,7 @@ description: Learn urban gardening, hydroponics, and indoor growing techniques. 
     <div class="featured-grid">
       {% for post in site.posts limit:3 %}
       <article class="featured-card">
-        <div class="featured-image" style="background-image: url({{ post.image | default: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400' }});">
+        <div class="featured-image" style="{% raw %}background-image: url({{ post.image | default: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400' }});{% endraw %}">
           <span class="featured-category">{{ post.categories | first | default: "Gardening" }}</span>
         </div>
         <div class="featured-content">
