@@ -28,7 +28,6 @@
   </script>
   
   {% if page.layout == 'post' %}
-  <link rel="stylesheet" href="/urban-garden-blog/assets/css/post.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_id }}" crossorigin="anonymous"></script>
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
@@ -389,24 +388,13 @@
         padding: 0;
       }
     }
-    /* --- Header Fix --- */
-  .site-header {
-    min-height: 56px;
-    background-color: #2c5530; /* fallback solid color */
-  }
-  .site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-  }
-</style>
+    </style>
   
     <link rel="preconnect" href="https://www.google-analytics.com">
   <!-- Google CMP Funding Choices -->
   </head>
 <body>
-  <header class="site-header">
+  <header>
     <div class="container" style="position:relative;">
       <h1 class="site-title">{{ site.title }}</h1>
       <p>{{ site.description }}</p>
