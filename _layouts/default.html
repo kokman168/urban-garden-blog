@@ -389,13 +389,24 @@
         padding: 0;
       }
     }
-  </style>
+    /* --- Header Fix --- */
+  .site-header {
+    min-height: 56px;
+    background-color: #2c5530; /* fallback solid color */
+  }
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+</style>
   
     <link rel="preconnect" href="https://www.google-analytics.com">
   <!-- Google CMP Funding Choices -->
   </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container" style="position:relative;">
       <h1 class="site-title">{{ site.title }}</h1>
       <p>{{ site.description }}</p>
