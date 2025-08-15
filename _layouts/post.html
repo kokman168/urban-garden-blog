@@ -58,14 +58,54 @@ layout: default
     </a>
   </div>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+  <!-- Main content area with sidebar -->
+  <div class="content-wrapper">
+    <!-- Main article content -->
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Adsterra 300x250 -->
+      <div class="ad-unit">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '18819be5412e5814769a2fff10580050',
+                'format' : 'iframe',
+                'height' : 250,
+                'width'  : 300,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/18819be5412e5814769a2fff10580050/invoke.js"></script>
+      </div>
+
+      <!-- Amazon Products -->
+      <div class="sidebar-products">
+        <h4>🌱 Recommended Products</h4>
+        <div class="product-item">
+          <h5>LED Grow Light System</h5>
+          <p>Perfect for indoor herbs</p>
+          <a href="https://www.amazon.com/s?k=LED+grow+light&tag={{ site.amazon_associate_tag }}" target="_blank" class="amazon-btn">View on Amazon</a>
+        </div>
+        <div class="product-item">
+          <h5>Hydroponic Starter Kit</h5>
+          <p>Complete system for beginners</p>
+          <a href="https://www.amazon.com/s?k=hydroponic+starter+kit&tag={{ site.amazon_associate_tag }}" target="_blank" class="amazon-btn">View on Amazon</a>
+        </div>
+      </div>
+    </aside>
   </div>
 
-  <!-- Author Bio -->
-  <div class="author-bio">
-    <h3>About the Author</h3>
-    <p>Urban Garden Pro is your trusted source for apartment gardening tips, product reviews, and sustainable living advice. We help urban dwellers transform small spaces into thriving gardens.</p>
+  <!-- Newsletter signup -->
+  <div class="newsletter-cta">
+    <h3>💡 Want More Urban Gardening Tips?</h3>
+    <p>Join thousands of urban gardeners getting weekly tips and exclusive discounts!</p>
+    <form action="{{ site.mailchimp.form_url }}" method="post" target="_blank" class="newsletter-form">
+      <input type="email" name="EMAIL" placeholder="Enter your email" required>
+      <button type="submit">Get Free Tips! 🌱</button>
+    </form>
   </div>
 
   <!-- Related Posts -->
@@ -202,11 +242,132 @@ layout: default
   color: white;
 }
 
+/* Content Layout */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
 /* Post Content */
 .post-content {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #333;
+  min-height: 400px;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ad-unit {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.sidebar-products {
+  background: #f0f8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.sidebar-products h4 {
+  color: #2c5530;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.product-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-item h5 {
+  margin: 0 0 0.5rem 0;
+  color: #2c5530;
+}
+
+.product-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.amazon-btn {
+  background: #ff9500;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.amazon-btn:hover {
+  background: #e6851a;
+}
+
+/* Newsletter CTA */
+.newsletter-cta {
+  background: linear-gradient(135deg, #e8f5e8, #d4f1d4);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.newsletter-cta h3 {
+  color: #2c5530;
+  margin-bottom: 1rem;
+}
+
+.newsletter-cta p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  min-width: 300px;
+}
+
+.newsletter-form button {
+  background: #2c5530;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #1f3d24;
 }
 
 .post-content h2 {
@@ -360,6 +521,19 @@ layout: default
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .sidebar {
+    order: -1;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .post {
     padding: 15px;
@@ -384,6 +558,19 @@ layout: default
   .post-nav {
     flex-direction: column;
     gap: 15px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    min-width: 250px;
+    width: 100%;
+  }
+  
+  .sidebar {
+    flex-direction: column;
   }
 }
 </style>
@@ -475,15 +662,4 @@ layout: default
     </div>
     {% endif %}
 </article>
-
-<!-- Mobile responsive adjustments -->
-<style>
-@media (max-width: 768px) {
-    .post-content { grid-column: 1 / -1; }
-    .sidebar { grid-column: 1 / -1; grid-row: 2; }
-    .post-content { display: block; }
-    .sidebar .sidebar-ad { position: static; }
-}
-</style>
-
 
