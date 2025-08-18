@@ -62,7 +62,7 @@
     <style>
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #2c5530; color: white; padding: 20px 0; text-align: center; }
+        #site-header { background: #2c5530; color: white; padding: 20px 0; text-align: center; }
         header h1 { margin: 0; font-size: 2.5rem; }
         nav { background: #4a7c59; padding: 15px 0; }
         nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
@@ -75,7 +75,7 @@
         .email-signup button { background: #fff; color: #2c5530; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 16px; }
         .affiliate-box { background: #e8f5e8; border: 2px solid #2c5530; padding: 20px; border-radius: 10px; margin: 30px 0; text-align: center; }
         .affiliate-button { background: #ff9500; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin: 10px; }
-        footer { background: #2c5530; color: white; text-align: center; padding: 20px 0; }
+        #site-footer { background: #2c5530; color: white; text-align: center; padding: 20px 0; }
         .sidebar-ad { position: sticky; top: 20px; }
         @media (max-width: 768px) {
             .container { padding: 0 15px; }
@@ -115,7 +115,7 @@
         @media(max-width:768px){ .hero{padding:60px 15px;} .hero h2{font-size:1.8rem;} }
     /* Dark theme overrides */
 body.dark { background:#121212; color:#e0e0e0; }
-body.dark header, body.dark nav, body.dark footer { background:#1f1f1f; }
+body.dark #site-header, body.dark nav, body.dark #site-footer { background:#1f1f1f; }
 body.dark a { color:#90c695; }
 </style>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
@@ -125,7 +125,7 @@ body.dark a { color:#90c695; }
     <script async src="https://fundingchoicesmessages.google.com/i/pub-7298798192334573?ers=1" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header id="site-header">
         <div class="container" style="position:relative;">
              <h1>{{ site.title }}</h1>
              <p>{{ site.description }}</p>
@@ -212,7 +212,7 @@ body.dark a { color:#90c695; }
         </div>
     </div>
 
-    <footer>
+    <footer id="site-footer">
         <div class="container">
             <p>&copy; 2024 {{ site.title }}. All rights reserved. | <a href="/urban-garden-blog/privacy/" style="color: #90c695;">Privacy Policy</a> | <a href="/urban-garden-blog/disclaimer/" style="color: #90c695;">Disclaimer</a></p>
             <p>💰 <em>As an Amazon Associate, we earn from qualifying purchases.</em></p>
