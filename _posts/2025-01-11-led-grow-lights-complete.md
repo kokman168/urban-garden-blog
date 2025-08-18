@@ -26,7 +26,7 @@ After testing **34 different LED grow lights** over 12 months and measuring actu
 
 | Light Model | Coverage | True Wattage | Yield/Month | Price | Best For |
 |------------|----------|--------------|-------------|-------|----------|
-| **Spider Farmer SF2000** | 3x4 ft | 200W | 4-6 oz | $269 | [**BEST OVERALL →**](https://www.amazon.com/dp/B07QFPBQDR?tag=kokman-20) |
+| **Spider Farmer SF2000** | 3x4 ft | 200W | 4-6 oz | $269 | [**BEST OVERALL →**](https://www.amazon.com/Spider-Farmer-SF2000-Dimmable-Hydroponics/dp/B07TVD1Y3K?tag=kokman-20) |
 | **MARS HYDRO TS 1000** | 2x2 ft | 150W | 3-4 oz | $139 | [**BEST VALUE →**](https://www.amazon.com/dp/B07PLY1WKK?tag=kokman-20) |
 | **VIPARSPECTRA P1000** | 2x2 ft | 100W | 2-3 oz | $89 | [**BUDGET PICK →**](https://www.amazon.com/dp/B083JVXHF6?tag=kokman-20) |
 | **Phlizon 2000W** | 4x4 ft | 240W | 6-8 oz | $189 | [**HIGH YIELD →**](https://www.amazon.com/dp/B07RXZM8YZ?tag=kokman-20) |
@@ -43,7 +43,7 @@ After testing **34 different LED grow lights** over 12 months and measuring actu
 
 **2. Coverage Area Reality Check**
 - Manufacturer claims are often 50% inflated
-- **[Spider Farmer SF2000](https://www.amazon.com/dp/B07QFPBQDR?tag=kokman-20)**: Claims 4x4, Reality 3x4 (still excellent)
+- **[Spider Farmer SF2000](https://www.amazon.com/Spider-Farmer-SF2000-Dimmable-Hydroponics/dp/B07TVD1Y3K?tag=kokman-20)**: Claims 4x4, Reality 3x4 (still excellent)
 - **[MARS HYDRO TS 1000](https://www.amazon.com/dp/B07PLY1WKK?tag=kokman-20)**: Claims 3x3, Reality 2x2 (perfect for small spaces)
 
 <!-- Email Capture with High-Value Offer -->
@@ -84,7 +84,7 @@ After testing **34 different LED grow lights** over 12 months and measuring actu
 ### Flowering/Fruiting Stage:
 - **12 hours on, 12 hours off**
 - Best spectrum: 3000K (red-heavy)
-- Recommended: **[Spider Farmer SF2000](https://www.amazon.com/dp/B07QFPBQDR?tag=kokman-20)** full spectrum
+- Recommended: **[Spider Farmer SF2000](https://www.amazon.com/Spider-Farmer-SF2000-Dimmable-Hydroponics/dp/B07TVD1Y3K?tag=kokman-20)** full spectrum
 
 ### Herbs & Microgreens:
 - **14-16 hours on**
@@ -150,7 +150,7 @@ After testing **34 different LED grow lights** over 12 months and measuring actu
 <div style="background: #28a745; color: white; padding: 30px; border-radius: 10px; margin: 30px 0; text-align: center;">
 <h2>🎯 Ready to Start Growing?</h2>
 <p style="font-size: 18px;">Don't waste money on the wrong light. Our readers save an average of $347 using our recommendations.</p>
-<a href="https://www.amazon.com/dp/B07QFPBQDR?tag=kokman-20" style="background: white; color: #28a745; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; margin: 10px;">GET OUR #1 PICK WITH FREE SHIPPING →</a>
+<a href="https://www.amazon.com/Spider-Farmer-SF2000-Dimmable-Hydroponics/dp/B07TVD1Y3K?tag=kokman-20" style="background: white; color: #28a745; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; margin: 10px;">GET OUR #1 PICK WITH FREE SHIPPING →</a>
 </div>
 
 ## ❓ Frequently Asked Questions
@@ -179,7 +179,7 @@ After testing **34 different LED grow lights** over 12 months and measuring actu
 **[MARS HYDRO TS 1000](https://www.amazon.com/dp/B07PLY1WKK?tag=kokman-20)** - Professional results
 
 ### 💵 $200-300:
-**[Spider Farmer SF2000](https://www.amazon.com/dp/B07QFPBQDR?tag=kokman-20)** - Commercial quality
+**[Spider Farmer SF2000](https://www.amazon.com/Spider-Farmer-SF2000-Dimmable-Hydroponics/dp/B07TVD1Y3K?tag=kokman-20)** - Commercial quality
 
 ### 💵 $300+:
 **[MARS HYDRO TSW 2000](https://www.amazon.com/dp/B07VL8FZS1?tag=kokman-20)** - Maximum yields

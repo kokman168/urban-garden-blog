@@ -109,7 +109,7 @@ For budget-conscious gardeners, the **[iDOO 12-Pod System](https://www.amazon.co
 
 ### Flash Sales Ending Soon:
 - **[Tower Garden HOME](https://www.amazon.com/dp/B08J4P8QZK?tag=kokman-20)** - Save $100 (Reg $699)
-- **[Spider Farmer SF2000 LED](https://www.amazon.com/dp/B07QFPBQDR?tag=kokman-20)** - 30% OFF today only
+- **[Spider Farmer SF2000 LED](https://www.amazon.com/Spider-Farmer-SF2000-Dimmable-Hydroponics/dp/B07TVD1Y3K?tag=kokman-20)** - 30% OFF today only
 - **[VIVOSUN Complete Kit](https://www.amazon.com/dp/B07H9VKPX3?tag=kokman-20)** - Extra 15% with code GARDEN15
 
 <!-- Bottom Email Capture -->
